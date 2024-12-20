@@ -1,0 +1,276 @@
+
+
+
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  display: grid;
+  grid-template-columns: 300px 1fr; /* Sidebar and main content */
+  grid-template-rows: auto; /* Allow rows to adjust based on content */
+  height: 100vh; 
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 300px;
+  background-color: #1c1c1c;
+  color: white;
+  display: grid;
+  grid-template-rows: auto 1fr auto; /* Profile, navigation, and social media */
+  align-items: center; /* Center items in their grid areas */
+  position: fixed; /* Sidebar stays in place when scrolling */
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Add scroll if content overflows */
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.profile img {
+  width: 150px;
+  border-radius: 5%;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  margin-left: 50px;
+}
+
+.profile h2 {
+  font-size: 20px;
+  padding-left: 60px;
+}
+
+.profile p {
+  font-size: 14px;
+  color: #aaa;
+  padding-left: 60px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  background-color: #333;
+}
+
+/* Social Media Styling */
+.social-media {
+  display: grid;
+  grid-auto-flow: column; /* Arrange items horizontally */
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s;
+}
+
+.social-media img:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content Styling */
+main {
+  grid-column: 2; /* Place main content in the second column */
+  background-image: url('/assets/headerbkg.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #b7b0b0;
+  padding: 20px;
+  overflow-y: auto;
+  
+}
+
+/* Intro Section */
+.intro {
+  text-align: center;
+  color: rgb(52, 49, 49);
+  margin: 20px 0;
+}
+
+.intro h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 24px;
+  background: #1c1c1c;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* About Section */
+#about {
+  background-color: #44444466 ;
+  color: white;
+  padding: 100px;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 1.8; /* Adjust this value for more or less spacing */
+  margin-bottom: 15px}
+
+
+  #portfolio {
+    display: grid;
+    grid-area: prt;
+    grid-template-columns: 1fr;
+    background-color: #55555500;
+    padding: 50px 40px; 
+    text-align: center;
+    font-size: 1.4em;
+  }
+    #galleryContainer {
+      position: relative; 
+      overflow: hidden; 
+    }
+    #gallery {
+      display: grid; 
+      grid-auto-flow: column; 
+      gap: 20px;   
+      width: 100%; 
+      overflow: hidden; 
+      margin: 10px 0 15px;
+      scroll-behavior: smooth;
+      overflow-x: scroll; 
+      }
+    
+    .galleryItem {
+      min-width: 300px; 
+      height: 500px;
+      background-color: #33333305;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      font-size: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s, transform 0.3s;
+      cursor: pointer;
+      padding: 5px;
+    } 
+    .galleryItem:hover {
+      background-color: #555;
+      transform: scale(1.05);
+    }
+    #luke {
+      width: 90%;
+    }
+    #detailer {
+      width: 100%;
+    }
+    #scrollButtons {
+      display: grid;
+      position: relative; 
+      left: 50%; 
+      transform: translateX(-50%); 
+      grid-template-columns: repeat(2, auto); 
+      gap: 15px; 
+      z-index: 10; 
+      justify-content: center; 
+      align-items: center; 
+      margin-bottom: 5px;
+    }
+    .arrowButton {
+      background-color: #6a553c; 
+      color: #fff;
+      border: 2px solid #444; 
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      font-size: 30px;
+      transition: background-color 0.3s, border-color 0.3s, transform 0.3s;
+    }
+    .arrowButton:hover {
+      background-color: #0056b3; 
+      border-color: #333; 
+      transform: scale(1.1);
+    }
+    #contact {
+      padding: 20px;
+      background-color: #0b090925;
+      border-radius: 8px;
+      margin: 20px 0;
+      text-align: center;
+    }
+    
+    #contact h2 {
+      margin-bottom: 15px;
+    }
+    
+    #contact p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    
+    .email-link {
+      font-size: 18px;
+      color: #007BFF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .email-link:hover {
+      color: #0056b3;
+      text-decoration: underline;
+    }
+    #skills {
+      padding: 20px;
+      background-color: #f4f4f400;
+      text-align: center;
+    }
+    
+    #skills h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #333;
+    }
+    
+    .skills-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+    
+    .skill-box {
+      background-color: #46484b;
+      color: rgba(255, 255, 255, 0.998);
+      font-size: 15px;
+      font-weight:1em;
+      padding: 20px;
+    
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100px;
+      text-align: center;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    .skill-box:hover {
+      transform: translateY(-5px);
+      background-color: #0e1216;
+    }
